@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.yi.order.mapper.CuisinesMapper">
+	
+		<!-- void addCuisines(String name); -->
+		<insert id="addCuisines" useGeneratedKeys="true" keyProperty="id" parameterType="com.yi.order.bean.Cuisines">
+			insert into cuisines(name) values(#{name})
+		</insert>
+		
+		<!-- List<Cuisines> getCuisines(); -->
+		<select id="getCuisines" resultType="com.yi.order.bean.Cuisines">
+			select id,name from cuisines
+		</select>
+		
+		<!-- void deleteCuisines(Integer id); -->
+		<delete id="deleteCuisines">
+			delete from cuisines where id=#{id}
+		</delete>		
+		
+		
+		
+	</mapper>

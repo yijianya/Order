@@ -1,0 +1,13 @@
+CREATE DATABASE yi_order character set utf8;
+
+USE yi_order;
+
+菜系表
+create table cuisines(
+	id int auto_increment,
+	name varchar(20),
+	primary key(id)
+)default charset=utf8;
+
+insert into cuisines(name) values("淮扬菜");
+insert into cuisines(name) values("粤菜");
